@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fit Tracker</title>
+
+        <footer>
+        <p>
+          This project is setup by
+          <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
+        </p>
+      </footer>
+    </div>
+
+    <!-- Custom Form Submit -->
+    <script>
+      const exerciseForm = document.getElementById('exercise-form');
+
+      exerciseForm.addEventListener('submit', () => {
+        const userId = document.getElementById('uid').value;
+        exerciseForm.action = `/api/users/${userId}/exercises`;
+
+        exerciseForm.submit();
+      });
+    </script>
+
+  </body>
+</html>
